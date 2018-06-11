@@ -101,12 +101,10 @@ export default {
 			}
 		},
 		controlFn(val){						//播放器控制回调
-			//console.log(val)
 			SocketFn(val)
 		},
 		loadFn(){
       this.isLoadFn(false)
-
 			console.log("加载完成")
 		},
 		playVideNumFun(){
@@ -204,7 +202,7 @@ export default {
 			indJson.id=id
 
 			this.currentDat =  $.grep(_this.carDat,function(n,i){
-				return n.id == id;
+				return n.id == id
 			})[0]
 			// indexJson.id=currentId
 			// indexJson.index=currentIndex
@@ -239,8 +237,6 @@ export default {
 		})
 		
 		this.swiperFun(0)     //默认初始index
-		
-		
 	},
 	components:{
 		Hint,

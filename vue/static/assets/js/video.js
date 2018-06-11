@@ -59,7 +59,6 @@ Videofun.prototype.init=function(dat,fn,touchObj){
   this._progressFun()
   this._jumpTime()
     
-
   this.videoLoadSucceed(function(){     //加载回调
     // _this.videoTimer&&clearTimeout(_this.clearTimeout)
     // _this.videoTimer=setTimeout(function(){
@@ -344,8 +343,6 @@ Videofun.prototype._nowTime=function(){                                         
         }
     }
 }
-
-
 
 Videofun.prototype.againFun=function(){
     let currentTim=this.mainContainer.querySelectorAll(".current-tim")[0]

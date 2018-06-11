@@ -82,16 +82,6 @@ export default {
         },
         ...mapActions(["isLoadFn"])
     },
-    // beforeRouteEnter(to, from, next) {
-	// 	let _this=this
-	// 	if(to.path==="/twocar"){
-	// 		SocketFn({
-	// 			type:"totwocar",
-	// 			videoNum:_this.contrastCarArr
-	// 		})
-	// 	}
-	// 	next()
-  	// },
     computed:{
         ...mapGetters(["contrastCarArr","isLoad"])
     },

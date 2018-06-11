@@ -19,9 +19,9 @@ export default{
 		mounted(){
 			var _this = this;
 			_this.$on('setBelow',function(params){
-					_this.title = params.coord.title;
+					_this.title = params.coord.title
 					//拼接图片
-					_this.src = params.video.url + "?second="+params.currenttime+"&width=240";
+					_this.src = params.video.url + "?second="+params.currenttime+"&width=240"
 						//console.log(_this.src);
 			})
 		}

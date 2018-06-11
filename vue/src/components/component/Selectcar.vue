@@ -34,14 +34,14 @@ export default {
         },
         addClassFun(){
             let _this=this
-             for(var i=0;i<_this.swiper.swiperCar.slides.length;i++){
-                 $(_this.swiper.swiperCar.slides[i]).removeClass('current');
+            for(var i=0;i<_this.swiper.swiperCar.slides.length;i++){
+                $(_this.swiper.swiperCar.slides[i]).removeClass('current');
             }
             for(var i=0;i<_this.swiper.swiperCar.slides.length;i++){
                 for(var j=0;j<_this.contrastCarArr.length;j++){
                     if(_this.contrastCarArr[j].dat){
                         if($(_this.swiper.swiperCar.slides[i]).attr('data-id') == parseInt(_this.contrastCarArr[j].dat.id)){
-                            $(_this.swiper.swiperCar.slides[i]).addClass('current');
+                            $(_this.swiper.swiperCar.slides[i]).addClass('current')
                         }
                     }
                 }
@@ -52,7 +52,7 @@ export default {
             _this.$on('removeSwiperCar',function(currents){
                 for(var i=0;i<_this.swiper.swiperCar.slides.length;i++){
                     if($(_this.swiper.swiperCar.slides[i]).attr('data-id') == parseInt(currents.dat.id)){
-                        $(_this.swiper.swiperCar.slides[i]).removeClass('current');
+                        $(_this.swiper.swiperCar.slides[i]).removeClass('current')
                     }
                 }
             })
@@ -63,21 +63,15 @@ export default {
                 slideIdx:_this.initVideoNum, 
                 count:_this.carDat.length,
                 click(swiper,event){
-                    let id = $(swiper.clickedSlide).attr('data-id');
+                    let id = $(swiper.clickedSlide).attr('data-id')
                     let o = $.grep(_this.carDat,function(n,i){
-                        return n.id == id;
+                        return n.id == id
                     })[0];
-                    o.index = $(swiper.clickedSlide).attr('data-index');
-                    _this.dbCarFun(o);
+                    o.index = $(swiper.clickedSlide).attr('data-index')
+                    _this.dbCarFun(o)
                     _this.addClassFun()
-                    // var currents = $.grep(_this.carDat,function(n,i){
-                    //   return n.currentClass == true;
-                    // })
-
                 },
                 slideChange:function(index){
-
-                  
                     //let currentId=$(this.slides[this.activeIndex]).data("id")
                     // console.log(currentId)
                     //_this.currentVideo(currentId)
@@ -86,7 +80,7 @@ export default {
                 }
                  
             }
-            _this.swiper = $('.swiper-container-car').swiperCar(setting);
+            _this.swiper = $('.swiper-container-car').swiperCar(setting)
             _this.addClassFun()
         },
         ...mapActions(["contrastCarFun","changeSelectCarIndex","currentVideo","deldbFun"])
@@ -95,12 +89,9 @@ export default {
         this.deldbFun(false) //删除第二个车
         this.swiperFun()
         this.removeClassFun()
-        this.deldbFun(false) //删除第二个车
         //this.addClassFun()
         //console.log(swiper.getSlideIndex());
         //swiper.slideTo(4);
-
-        
     }
 }
 </script>

@@ -35,10 +35,10 @@ export default {
             var setting ={
                 count:_this.carDat.length,
                 slideChange:function(index){
-                    console.log(index,'aa');
+                    console.log(index,'aa')
                 }
             }
-            var swiper = $('.swiper-container-car').swiperCar(setting);
+            var swiper = $('.swiper-container-car').swiperCar(setting)
         },
         ...mapActions(["contrastCarFun"])
     },

@@ -1,39 +1,34 @@
-# car_demo
+# 双屏显示系统
 
-#### 项目介绍
-{**以下是码云平台说明，您可以替换为您的项目简介**
-码云是开源中国推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用码云实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
+
+**项目简介**
+
+通过移动端（pad或者手机）等移动设备控制pc端大屏来展示车辆信息，进行车辆对比，和视屏控制播放等操作！
 
 #### 软件架构
-软件架构说明
+
+1.pc和移动端都采用vue+vue-router+vuex+swiper架构模式，由于是演示系统所以暂时采用了本地文件数据，如想采用线上地址可以直接采用axios或者fetch直接请求线上数据。
+
+2.服务端采用node.js和express搭建服务器，websocket进行控制指令传输，由于只作为一个中间转发的服务所以只做了一个简单的转发服务器。如需要更复杂的功能可以扩展完善！
 
 
 #### 安装教程
 
-1. xxxx
-2. xxxx
-3. xxxx
+
+1. cd node > npm install
+2. cd vue > npm install
+3. cd pc_vue > npm install
+
 
 #### 使用说明
 
-1. xxxx
-2. xxxx
-3. xxxx
-
-#### 参与贡献
-
-1. Fork 本项目
-2. 新建 Feat_xxx 分支
-3. 提交代码
-4. 新建 Pull Request
+1. cd node > node index.js
+2. cd vue > npm run dev
+3. cd pc_vue > npm run dev
 
 
-#### 码云特技
 
-1. 使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2. 码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3. 你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4. [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5. 码云官方提供的使用手册 [http://git.mydoc.io/](http://git.mydoc.io/)
-6. 码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+
+
+**系统还在完善中，希望大家多提意见，谢谢！**
+
